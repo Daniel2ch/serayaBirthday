@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // We define 8 unique card items (local photos) to form 8 matching pairs.
     const cardsArray = [
-        { type: 'image', value: '/images/Photo1.jpg' },
-        { type: 'image', value: '/images/Photo2.jpg' },
-        { type: 'image', value: '/images/Photo3.jpg' },
-        { type: 'image', value: '/images/Photo4.jpg' },
-        { type: 'image', value: '/images/Photo5.jpg' },
-        { type: 'image', value: '/images/Photo6.jpg' },
-        { type: 'image', value: '/images/Photo7.jpg' },
-        { type: 'image', value: '/images/Photo8.jpg' },
+        { type: 'image', value: 'images/Photo1.jpg' },
+        { type: 'image', value: 'images/Photo2.jpg' },
+        { type: 'image', value: 'images/Photo3.jpg' },
+        { type: 'image', value: 'images/Photo4.jpg' },
+        { type: 'image', value: 'images/Photo5.jpg' },
+        { type: 'image', value: 'images/Photo6.jpg' },
+        { type: 'image', value: 'images/Photo7.jpg' },
+        { type: 'image', value: 'images/Photo8.jpg' },
     ];
 
     // Double the array so we have 2 of each card (making 16 cards total / 8 pairs).
@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let quizLock = false;          // Prevents multiple rapid clicks while showing answer feedback
     let clickedOptions = [];       // Tracks which option indices have been clicked (used for allCorrect questions)
 
-    const puzzleImages = ['/images/Game3Photo.jpg', '/images/Game3Photo2.jpg'];
+    const puzzleImages = ['images/Game3Photo.jpg', 'images/Game3Photo2.jpg'];
     let currentPuzzleRound = 0;
     let selectedPuzzlePiece = null;
     let placedPieces = 0;
@@ -322,7 +322,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (currentQuestionIndex === 0) {
                     quizFeedback.innerHTML = `
                         <div style="margin-bottom: 10px;">All of them of course dummy!</div>
-                        <img src="/images/DespicableMeFlirting.gif" alt="Flirting GIF" style="max-width: 200px; border-radius: 10px;">
+                        <img src="images/DespicableMeFlirting.gif" alt="FlirtingGIF" style="max-width: 200px; border-radius: 10px;">
                     `;
                 } else {
                     quizFeedback.textContent = "All of them of course dummy!";
@@ -357,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Use innerHTML to display the text and the success GIF
             quizFeedback.innerHTML = `
                 <div style="margin-bottom: 10px;">Correct! Yayyyyy 🥰</div>
-                <img src="/images/HappyGrogu.gif" alt="HappyGorgu" style="max-width: 200px; border-radius: 10px;">
+                <img src="images/HappyGrogu.gif" alt="HappyGorgu" style="max-width: 200px; border-radius: 10px;">
             `;
             
             quizFeedback.className = "quiz-feedback correct-text";
@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Use innerHTML to display the custom message and your GIF
             quizFeedback.innerHTML = `
                 <div style="margin-bottom: 10px;">Really?</div>
-                <img src="/images/SadGrogu.gif" alt="SadGrogu" style="max-width: 200px; border-radius: 10px;">
+                <img src="images/SadGrogu.gif" alt="SadGrogu" style="max-width: 200px; border-radius: 10px;">
             `;
             
             quizFeedback.className = "quiz-feedback incorrect-text";
